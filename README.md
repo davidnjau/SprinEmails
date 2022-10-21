@@ -12,11 +12,20 @@ For building and running the application you need:
 ```shell
 mvn spring-boot:run
 ```
-## Accessing Swagger
+## Sending emails
 
-You can access the swagger UI platform from:
+You can send emails as follows:
 
 ```shell
-http://{{host_url}}:8081/swagger-ui.html
+Post 0.0.0.0:8081/api/v1/send-email
+Payload:
+{
+    "to": "",
+    "subject": "Test email",
+    "message": "This is a test email",
+    "file":"file" // This is optional
+    
+}
+
 ```
 
